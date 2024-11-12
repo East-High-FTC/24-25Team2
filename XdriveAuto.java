@@ -77,9 +77,9 @@ public class XdriveAuto extends XdriveRobot {
         //double turn_val = 55.0 * Math.PI / 180;
         //double turn_val = 62.5 * Math.PI / 180;
         
-        intake.setPower(0.7);
+        //intake.setPower(0.7);
         opmode.sleep(100);
-        intake.setPower(0);
+        //intake.setPower(0);
         
         driveLine(0, 26, drive_power, getHeading() + Math.PI);
         
@@ -147,9 +147,9 @@ public class XdriveAuto extends XdriveRobot {
     }
     
     public void outtake(double power) {
-        intake.setPower(-power);
+        //intake.setPower(-power);
         opmode.sleep(1000);
-        intake.setPower(0);
+        //intake.setPower(0);
     }
     
     public boolean foundProp(double secs) {

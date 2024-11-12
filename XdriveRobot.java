@@ -34,7 +34,7 @@ public class XdriveRobot {
     public DcMotor         tr  = null;
     public DcMotor         bl   = null;
     public DcMotor         br  = null;
-    public DcMotor intake = null;
+    //public DcMotor intake = null;
     public IMU imu = null;
     
     
@@ -59,7 +59,7 @@ public class XdriveRobot {
         tr = map.get(DcMotor.class, "front_right");
         bl  = map.get(DcMotor.class, "back_left");
         br = map.get(DcMotor.class, "back_right");
-        intake = map.get(DcMotor.class, "intake");
+        //intake = map.get(DcMotor.class, "intake");
         
         if (using_encoders) {
             tl.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);

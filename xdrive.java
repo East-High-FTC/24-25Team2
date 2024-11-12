@@ -30,8 +30,8 @@ public class xdrive extends LinearOpMode {
     private DcMotor br = null;
     private DcMotor bl = null;
     //private DcMotor climberspool = null;
-    private DcMotor intake = null;
-    private Servo drone_servo = null;
+    //private DcMotor intake = null;
+    //private Servo drone_servo = null;
     private IMU imu = null;
     
     private double padx = 0.0;
@@ -61,8 +61,8 @@ public class xdrive extends LinearOpMode {
         br = hardwareMap.get(DcMotor.class, "back_right");
         bl = hardwareMap.get(DcMotor.class, "back_left");
         //climberspool = hardwareMap.get(DcMotor.class, "climberspool");
-        intake = hardwareMap.get(DcMotor.class, "intake");
-        drone_servo = hardwareMap.get(Servo.class, "drone");
+        //intake = hardwareMap.get(DcMotor.class, "intake");
+        //drone_servo = hardwareMap.get(Servo.class, "drone");
         
         initMotor();
         initIMU();
@@ -138,23 +138,23 @@ public class xdrive extends LinearOpMode {
         
         // both drivers
         if (gamepad1.b || gamepad2.b) {
-            drone_servo.setPosition(1);
+            //drone_servo.setPosition(1);
         } else {
-            drone_servo.setPosition(0);
+            //drone_servo.setPosition(0);
         }
         
         if (gamepad1.right_trigger > 0 || gamepad2.right_trigger > 0) {
           // Run intake
-          intake.setPower(2);
+          //intake.setPower(2);
         } else {
-          intake.setPower(0);
+          //intake.setPower(0);
         }
         
         if (gamepad1.left_trigger > 0 || gamepad2.left_trigger > 0) {
           // Run outtake
-          intake.setPower(-1);
+          //intake.setPower(-1);
         } else {
-          intake.setPower(0);
+          //intake.setPower(0);
         }
         
         if (gamepad1.dpad_down || gamepad2.dpad_down) {
