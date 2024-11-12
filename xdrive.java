@@ -29,7 +29,7 @@ public class xdrive extends LinearOpMode {
     private DcMotor tr = null;
     private DcMotor br = null;
     private DcMotor bl = null;
-    private DcMotor climberspool = null;
+    //private DcMotor climberspool = null;
     private DcMotor intake = null;
     private Servo drone_servo = null;
     private IMU imu = null;
@@ -60,7 +60,7 @@ public class xdrive extends LinearOpMode {
         tr = hardwareMap.get(DcMotor.class, "front_right");
         br = hardwareMap.get(DcMotor.class, "back_right");
         bl = hardwareMap.get(DcMotor.class, "back_left");
-        climberspool = hardwareMap.get(DcMotor.class, "climberspool");
+        //climberspool = hardwareMap.get(DcMotor.class, "climberspool");
         intake = hardwareMap.get(DcMotor.class, "intake");
         drone_servo = hardwareMap.get(Servo.class, "drone");
         
@@ -99,7 +99,7 @@ public class xdrive extends LinearOpMode {
         tr.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         bl.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         br.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        climberspool.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        //climberspool.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
     
     private void handleController() {
@@ -159,12 +159,12 @@ public class xdrive extends LinearOpMode {
         
         if (gamepad1.dpad_down || gamepad2.dpad_down) {
           // lower arm
-          climberspool.setPower(1);
+          //climberspool.setPower(1);
         } else if (gamepad1.dpad_up || gamepad2.dpad_up) {
           // raise arm
-          climberspool.setPower(-1);
+          //climberspool.setPower(-1);
         } else {
-                climberspool.setPower(0);
+                //climberspool.setPower(0);
         }
     }
     
